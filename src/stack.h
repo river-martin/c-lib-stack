@@ -16,7 +16,7 @@ typedef struct __node {
 
 typedef struct __stack {
     node_t *top; /**< A pointer to the node at the top of the stack */
-} stack_t;
+} vp_stack_t;
 
 /**
  * @brief Add an item to the top of the given stack.
@@ -24,7 +24,7 @@ typedef struct __stack {
  * @param stack The stack to push to.
  * @param item The item to push.
  */
-extern void push(stack_t *stack, void *item);
+extern void push(vp_stack_t *stack, void *item);
 
 /**
  * @brief Remove an item from the top of the stack and return it.
@@ -32,6 +32,6 @@ extern void push(stack_t *stack, void *item);
  * @param stack The stack to pop from.
  * @return The item at the top of the stack.
  */
-extern void *pop(stack_t *stack);
+extern void *pop(vp_stack_t *stack);
 
 #endif // _STACK_H
