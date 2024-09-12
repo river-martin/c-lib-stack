@@ -1,7 +1,7 @@
 CC := clang
 
 # compiler flags
-DEBUG     := -ggdb -gdwarf-4
+DEBUG     := -gdwarf-4
 OPTIMISE  := -O0
 WARNING   := -Wall -Wextra -Wno-variadic-macros \
              -Wno-overlength-strings -pedantic
@@ -51,3 +51,4 @@ clean:
 	rm -f test_stack
 
 .PHONY: clean tests install uninstall
+
