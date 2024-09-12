@@ -16,12 +16,12 @@ typedef struct __node {
 
 typedef struct __stack {
     node_t *top; /**< A pointer to the node at the top of the stack */
-} vp_stack_t;
+} vp_stack;
 
 /**
  * @brief Create and initialize a new `void *` stack
  */
-extern vp_stack_t *vp_stack_new(void);
+extern vp_stack *vp_stack_new(void);
 
 /**
  * @brief Add an item to the top of the given stack.
@@ -29,7 +29,7 @@ extern vp_stack_t *vp_stack_new(void);
  * @param stack The stack to push to.
  * @param item The item to push.
  */
-extern void vp_stack_push(vp_stack_t *stack, void *item);
+extern void vp_stack_push(vp_stack *stack, void *item);
 
 /**
  * @brief Remove an item from the top of the stack and return it.
@@ -37,6 +37,6 @@ extern void vp_stack_push(vp_stack_t *stack, void *item);
  * @param stack The stack to pop from.
  * @return The item at the top of the stack.
  */
-extern void *vp_stack_pop(vp_stack_t *stack);
+extern void *vp_stack_pop(vp_stack *stack);
 
 #endif // _STACK_H

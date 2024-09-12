@@ -5,14 +5,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-vp_stack_t _stack = { .top = NULL };
+vp_stack _stack = { .top = NULL };
 
 #define pop_intp(stack) ((int *) pop(stack))
 
 /**
  * @brief Test the stack with int pointers.
  */
-void test_int_stack(vp_stack_t *stack)
+void test_int_stack(vp_stack *stack)
 {
     for (int i = 0; i < 10; i++) {
         int *n = malloc(sizeof(int));
@@ -34,7 +34,7 @@ void test_int_stack(vp_stack_t *stack)
 /**
  * @brief Test the stack with char pointers.
  */
-void test_str_stack(vp_stack_t *stack)
+void test_str_stack(vp_stack *stack)
 {
     char *strs[] = { "Hello", "World", "C", "Programming", "Language" };
     for (size_t i = 0; i < sizeof(strs) / sizeof(*strs); i++)
@@ -52,7 +52,7 @@ void test_str_stack(vp_stack_t *stack)
 
 int main(void)
 {
-    vp_stack_t stack = { .top = NULL };
+    vp_stack stack = { .top = NULL };
     test_int_stack(&stack);
     assert(stack.top == NULL);
     test_str_stack(&stack);
