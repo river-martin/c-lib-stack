@@ -19,12 +19,17 @@ typedef struct __stack {
 } vp_stack_t;
 
 /**
+ * @brief Create and initialize a new `void *` stack
+ */
+extern vp_stack_t *vp_stack_new(void);
+
+/**
  * @brief Add an item to the top of the given stack.
  *
  * @param stack The stack to push to.
  * @param item The item to push.
  */
-extern void push(vp_stack_t *stack, void *item);
+extern void vp_stack_push(vp_stack_t *stack, void *item);
 
 /**
  * @brief Remove an item from the top of the stack and return it.
@@ -32,6 +37,6 @@ extern void push(vp_stack_t *stack, void *item);
  * @param stack The stack to pop from.
  * @return The item at the top of the stack.
  */
-extern void *pop(vp_stack_t *stack);
+extern void *vp_stack_pop(vp_stack_t *stack);
 
 #endif // _STACK_H
