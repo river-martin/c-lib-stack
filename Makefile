@@ -9,9 +9,9 @@ EXTRA     := -std=c11 -fPIC
 CFLAGS    := $(DEBUG) $(OPTIMISE) $(WARNING) $(EXTRA)
 DFLAGS    ?= # -DDEBUG
 
-LDFLAGS := -L. -lstack
-
 # linker flags
+
+LDFLAGS := -L. -lstack
 
 # commands
 
