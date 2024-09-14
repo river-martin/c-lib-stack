@@ -21,6 +21,7 @@ COMPILE:=$(CC) $(CFLAGS) $(DFLAGS)
 
 libstack.a: build/src/stack.o
 	ar rcs $@ $^
+	ar t libstack.a
 
 tests: test_stack
 
