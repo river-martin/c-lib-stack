@@ -16,6 +16,7 @@ typedef struct __node {
 
 typedef struct __stack {
     node_t *top; /**< A pointer to the node at the top of the stack */
+    unsigned long size; /**< The number of items in the stack */
 } vp_stack;
 
 /**
